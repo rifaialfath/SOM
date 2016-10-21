@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title SOM PUB</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @*<link href="~/Content/bootstrap/css/bootstrap.css" rel="stylesheet" />*@
+    <link href="~/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap/css/local.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap/css/all.min.css" rel="stylesheet" />
+    <script src="~/Content/bootstrap/js/bootstrap.js"></script>
+    <script src="~/Content/bootstrap/js/bootstrap.min.js"></script>
+    
+    
+</head>
+<body>
+    <div id="wrapper">
+        <div id="page-wrapper">
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("SOM PUB", "Index", "Home", null, new { @class = "navbar-brand" })
+                </div>
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul id="active" class="nav navbar-nav side-nav" >
+
+                        <li class="selected">@Html.ActionLink("Dashboard", "Index", "Home")</li>
+
+                        <li class="dropdown user-dropdown">
+                            @Html.ActionLink("RAP", "Diskon", "Home")
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Diskon", "Diskon", "Home")</li>
+                        </ul>
+                    </li>
+                                <li>@Html.ActionLink("FSD", "blog", "Home")</li>
+                                <li>@Html.ActionLink("FOD", "signup", "Home")</li>
+                                <li>@Html.ActionLink("TAD", "register", "Home")</li>
+                                <li>@Html.ActionLink("Setting", "timeline", "Home")</li>
+                                <li>@Html.ActionLink("Master", "tables", "Home")</li>
+                                <li>@Html.ActionLink("Syncronize", "typography", "Home")</li>
+                                <li>@Html.ActionLink("Logout", "Login", "Account")</li>
+
+                            </ul>
+                    <ul class="nav navbar-nav navbar-right navbar-user">
+                        
+                        <li class="dropdown user-dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>Username<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><i class="fa fa-user"></i>@Html.ActionLink("Profile", "#", "Home")</li>
+                                <li><i class="fa fa-gear"></i>@Html.ActionLink("Settings", "#", "Home")</li>
+                                <li class="divider"></li>
+                                <li><i class="fa fa-power-off"></i>@Html.ActionLink("Log Out", "Login", "Account")</li>
+
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </nav>
+           </div>
+        </div>
+        @RenderBody()
+        
+
+            @*<div class="container body-content">
+               
+                <hr />
+                <footer>
+                    <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+                </footer>
+            </div>*@
+
+           <script src="~/Scripts/bootstrap.js"></script>
+           <script src="~/Scripts/jquery-1.10.2.js"></script>
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/bootstrap")
+            @RenderSection("scripts", required: false)
+
+</body>
+
+</html>
